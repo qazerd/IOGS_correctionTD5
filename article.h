@@ -1,22 +1,19 @@
-#ifndef ARTICLE_H
-#define ARTICLE_H
+#pragma once
 #include <iostream>
-#include <stdio.h>
+#include <cstdio>
 
 class Article
 {
 public:
     Article();
     Article( std::string nom, float prix);
-    std::string nom();
-    float prix();
+    const std::string &nom() const;
+    const float &prix () const;
     void modifierDisponibilite();
-    bool estDisponible();
-    void info();
+    const bool &estDisponible() const;
+    void info() const ;
 private:
     std::string _nom;
     float _prix;
     bool _dispo;
 };
-
-#endif // ARTICLE_H

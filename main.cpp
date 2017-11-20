@@ -1,5 +1,5 @@
 #include <iostream>
-#include <stdio.h>
+#include <cstdio>
 
 #include "article.h"
 #include "panier.h"
@@ -23,7 +23,7 @@ int main()
     p1.ajouterArticle(a3);
     p1.ajouterArticle(a4);
     p1.afficherArticles();
-    std::cout<<"vous bénéficiez d'une promorion de 10%"<<std::endl
+    std::cout<<"vous bénéficiez d'une promotion de 10% "<<std::endl;
     Promotion r=Promotion(10.0);
     p1.ajouterReduction(&r);//Reduction is an abstract class, so we use pointer
     std::cout<<"L'ensemble du panier avec réduction représente un montant de : " << p1.prixTotal() << endl;

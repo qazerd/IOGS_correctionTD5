@@ -1,5 +1,4 @@
-#ifndef REDUCTION_H
-#define REDUCTION_H
+#pragma once
 
 
 class Reduction
@@ -9,4 +8,4 @@ public:
     virtual float appliquer(float prix)=0;
 };
 
-#endif // REDUCTION_H
+

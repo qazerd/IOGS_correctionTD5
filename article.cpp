@@ -1,31 +1,30 @@
 ﻿#include "article.h"
 #include <iostream>
-#include <stdio.h>
+#include <cstdio>
 
 Article::Article()
-{
-_nom ="machin";
-_prix =0.00;
-_dispo = false;
-}
-Article::Article(std::string nom, float prix){
-    _nom=nom;
-    _prix=prix;
-    _dispo= true;
-}
-std::string Article::nom(){
+    : _nom("machin"),
+      _prix(0.00),
+      _dispo(false){}
+
+Article::Article(std::string nom, float prix)
+    : _nom(nom),
+      _prix(prix),
+      _dispo(true){}
+
+const std::string &Article::nom() const {
 return _nom;
 }
-float Article::prix(){
+const float &Article::prix() const{
 return _prix;
 }
-bool Article::estDisponible(){
+const bool &Article::estDisponible() const{
 return _dispo;
 }
 void Article::modifierDisponibilite(){
     _dispo= !this->_dispo;
 }
-void Article::info(){
+void Article::info() const{
     std::cout << "L'article " << _nom << " coûte " << _prix << " et ";
     if (_dispo){
         std::cout <<  "il est ";

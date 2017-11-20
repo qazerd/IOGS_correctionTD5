@@ -1,5 +1,4 @@
-#ifndef BONACHAT_H
-#define BONACHAT_H
+#pragma once
 
 #include "reduction.h"
 
@@ -13,5 +12,3 @@ BonAchat(float value);
 private:
     float _valeur;
 };
-
-#endif // BONACHAT_H

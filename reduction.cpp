@@ -1,6 +1,3 @@
 #include "reduction.h"
 
-Reduction::Reduction()
-{
-
-}
+Reduction::Reduction(){}

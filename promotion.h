@@ -1,5 +1,4 @@
-#ifndef PROMOTION_H
-#define PROMOTION_H
+#pragma once
 #include "reduction.h"
 
 class Promotion : public Reduction
@@ -11,5 +10,3 @@ public:
 private:
     float _valeur;
 };
-
-#endif // PROMOTION_H
